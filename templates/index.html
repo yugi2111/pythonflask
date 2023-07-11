@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<div class="content">
+        
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-8">
+                <form id="regForm" action="/" method="POST">
+                    <h1 id="register">Redshift Connect</h1>
+                    <div class="tab">
+                      <h6>Select Redshift</h6>
+                        <p>
+                        <select placeholder="Select Redshft" class="redshift" name="select_redshift">
+                            <option value="">Select Redshft</option>
+                            <option value="redshift-cluster-1">redshift-cluster-1</option>
+                        </select>
+                        </p>
+                        
+                    </div>
+                    <div class="tab">
+                      <h6>Select Query</h6>
+                        <p>
+                            <select placeholder="Select Query"  class="redshift" name="select_query">
+                                <option value="">Select Query</option>
+                                <option value="select-pb-user">"Select * FROM PB_USER"</option>
+                            </select>
+                        </p>
+                        
+                    </div>
+                    <div style="overflow:auto;" id="nextprevious">
+                        <div style="float:right;">
+                          <button type="submit" id="submit">Run <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                          </button> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
